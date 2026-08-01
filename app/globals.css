@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Inter, "Segoe UI", sans-serif;
+  background: #f8fbff;
+}
+
+::selection {
+  background: #1d4ed8;
+  color: white;
+}
+
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-floaty {
+  animation: floaty 4s ease-in-out infinite;
+}
