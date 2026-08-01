@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import NextAuthProvider from "@/components/providers/SessionProvider";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://gtgs.sl"),
@@ -31,6 +32,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className="min-h-screen bg-white text-slate-900 antialiased">
         <NextAuthProvider>{children}</NextAuthProvider>
+        <Analytics />
       </body>
     </html>
   );
